@@ -15,8 +15,12 @@
     <header class="header">
         <nav class="header-nav">
             <ul class="header-nav-ul">
-                <li id="home-active" class="active" onclick="homeBlock()">Home</li>
-                <li id="about-block" onclick="aboutBlock()">About</li>
+                <li id="home-active" class="active" onclick="homeBlock()">Home
+                    <div class="border-bottom"></div>
+                </li>
+                <li id="about-block" onclick="aboutBlock()">About
+                    <div class="border-bottom"></div>
+                </li>
             </ul>
             <div class="header-nav-author">Created By <a href="https://github.com/ibrahimkhalid-code" target="blanck">Ibrahim khalid</a>
             </div>
@@ -77,13 +81,14 @@
         const homeActive = document.getElementById("home-active");
         const homeSction = document.getElementById("home");
         const homeHead = document.getElementsByClassName("home-head");
+        const borderBottom = document.getElementsByClassName("border-bottom");
 
         function aboutBlock(){
             homeActive.classList.remove("active");
             homeSction.classList.add("home-none");
             aboutDisBlock.classList.add("active");
             aboutSection.classList.add("about-block");
-            // homeHead.style.position = "static";
+            borderBottom.classList.add("left-right");
         }
         function homeBlock(){
             homeActive.classList.add("active");
